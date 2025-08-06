@@ -1,6 +1,6 @@
 
 
-void SetProjections(A02 *A) {
+void SetProjections(A02 * A) {
 /**************
  Using A->SetMatrix(i, M) where:
  i -> index of the matrix to set (0 .. 7)
@@ -50,7 +50,7 @@ void SetProjections(A02 *A) {
 
 	// Isometric - z pointing bottom-left, and x pointing bottom-right
 	glm::mat4 RX2 = glm::rotate(glm::mat4(1.0f), glm::radians(35.264f), glm::vec3(1, 0, 0));
-	glm::mat4 RY2 = glm::rotate(glm::mat4(1.0f), glm::radians(-45.0f), glm::vec3(0, 1, 0));
+	glm::mat4 RY2 = glm::rotate(glm::mat4(1.0f), glm::radians(45.0f), glm::vec3(0, 1, 0));
 	M = ortho * RX2 * RY2;
 	A->SetMatrix(1,  MirrorMatrix*M);
 
@@ -86,5 +86,4 @@ void SetProjections(A02 *A) {
 	// Create a perspective projection, with a Fov-y of 150 degrees (wide)
 	M = glm::perspective(glm::radians(150.0f), 4.0f / 3.0f, 0.1f, f);
 	A->SetMatrix(7,  MirrorMatrix*M);
-
 }
