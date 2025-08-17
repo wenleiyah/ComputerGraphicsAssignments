@@ -1,0 +1,38 @@
+{
+	"models": [
+		{"id": "pl",  "VD": "VD",   "model": "assets/models/LargePlane.obj", "format":"OBJ"},
+		{"id": "an",  "VD": "VD",   "model": "assets/models/mike.obj",       "format":"OBJ"},
+		{"id": "sp",  "VD": "VD",   "model": "assets/models/sphere.obj",       "format":"OBJ"},
+		{"id": "su",  "VD": "VD",   "model": "assets/models/suzanne.obj",       "format":"OBJ"}
+	],
+	"textures": [
+		{"id": "tc",    "texture": "assets/textures/Textures.png",		"format": "C"},
+		{"id": "an",    "texture": "assets/textures/T_Zebra.png",		"format": "C"},
+		{"id": "haa",   "texture": "assets/textures/hair.jpg",         "format": "C"}
+	],
+	"instances": [
+		{"pipeline": "PBlinn", "elements": [
+			{"id": "pl",   "model": "pl",   "texture": ["tc"],
+			 "transform": [1, 0, 0, 0,
+						   0, 1, 0, -0.1,
+						   0, 0, 1, 0,
+						   0, 0, 0, 1]},
+			{"id": "su",  "model": "su",    "texture": ["tc"],
+			 "transform": [1, 0, 0, 2.75,
+						   0, 1, 0, 2.6,
+						   0, 0, 1, 0,
+						   0, 0, 0, 1]},
+			{"id": "sp",  "model": "sp",    "texture": ["tc"],
+				"transform": [1, 0, 0,0 ,
+					0,1, 0, 3,
+					0, 0, 1, 0,
+					0, 0, 0, 1]},
+			{"id": "an",  "model": "an",    "texture": ["an"],
+				"transform": [3, 0, 0, -2.5,
+					0, 3, 0, 0,
+					0, 0, 3, 0,
+					0, 0, 0, 1]}
+
+		]}
+	]
+}
